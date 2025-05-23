@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>FitCheck : resume & jd compatibility</title>
+  <style>
+    #form-group {
+      text-decoration: solid;
+      font-size: 18px;
+    }
+    #form-box label{
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id="logo"> </div>
+    
+  </header>
+  <main>
+    <div id="form-box" class="flex flex-col items-center justify-center h-screen">
+      <form action="" class="flex flex-col justify-center p-10 border-gray-300 border-2 rounded-[20px] gap-4">
+        <div id="form-group">
+          <label for="email" class=""> your email</label>
+          <br>
+          <input type="email" id="email" name="email" class="border border-gray-400 rounded-md p-2" required>
+        </div>
+        <div id="form-group">
+          <label for="resume">Resume</label>
+          <br>
+          <input type="file" id="resume" name="resume" accept=".pdf, .docx, .txt">
+        </div>
+        <div id="form-group">
+          <label for="jd">Job Description</label>
+          <br>
+          <input type="file" id="jd" name="jd" accept=".pdf, .docx, .txt">
+          <br>OR <br>
+          <textarea name="jd-text" id="jd-text">paste jd (in text format)</textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>
