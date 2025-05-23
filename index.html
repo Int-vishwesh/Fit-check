@@ -10,16 +10,11 @@
       z-index: 100;
       background-color: black;
     }
-    #form-box{
-      z-index: 10;
-      background: #fff;
-    }
     #form-group {
-      text-decoration: solid;
       font-size: 20px;
     }
     #form-group input[type="file"] {
-      font-size: 15px;
+      font-size: 14px;
     }
     #form-group p {
       padding: 2px;
@@ -29,31 +24,41 @@
     form label{
       font-weight: 500;
     }
-    form textarea{
-      font-size: 15px;
-      border-radius: 15px;
-      border: 2px solid #ccc;
+
+    @media (max-width: 768px) {
+    #form-group {
+      font-size: 16px;
+    }
+    #form-group input[type="file"] {
+      font-size: 12px;
+    }
+    #form-group p {
+      padding: 2px;
+      font-size: 11px;
+      font-style: italic;
+    }
+      
     }
   </style>
 </head>
 <body>
   <header>
-    <div id="logo" class="text-white text-[30px] mx-2 p-2 -mb-10 flex"> fit<b>Check</b> <p class="text-[13px] flex px-2 py-5 items-center">your reume-JD compatibity checker</p></div>
+    <div id="logo" class="text-white text-[30px] mx-2 p-2 -mb-12 flex"> fit<b>Check</b> <p class="text-[13px] flex px-2 py-5 items-center">your reume-JD compatibity checker</p></div>
   </header>
   <main class="flex flex-col items-center justify-center h-screen">
-      <form id="webhookForm" action="" class="flex flex-col justify-center rounded-[10px] bg-white px-10 py-8 gap-3">
-        <h2 class="font-bold w-96 text-center border-b-2 border-black">share your details here and let us check your resume compatibility and any imporovement</h2> <hr>
+      <form id="webhookForm" action="" class="flex flex-col justify-center item-center rounded-[10px] bg-[#bbbbbb] px-10 py-8 gap-3  w-[500px] max-sm:w-[90%]">
+        <h2 class="font-bold w-96 text-center border-b-2 border-black pb-3 max-sm:w-[95%] -mt-2">share your details here and let us check your resume compatibility and any imporovement</h2>
         <div id="form-group">
-          <label for="email" class=""> your email</label>
+          <label for="email" class=""> Your email</label>
           <br>
           <p>( to send you compatibility report )</p>
-          <input type="email" id="email" name="email" class="border-[1.9px] text-[15px] border-[#ccc] rounded-[10px] p- w-96 py-1" required>
+          <input type="email" id="email" name="email" class="border-[1px] text-[15px] border-[#555] rounded-[8px] py-0.5 max-sm:py-0 w-96 max-sm:w-[95%]" required>
         </div> <hr>
         <div id="form-group">
           <label for="resume">Resume</label>
           <br>
-          <p>( upload your resume in docs or pdf format)</p>
-          <input type="file" id="resume" name="resume" accept=".pdf, .docx, .txt">
+          <p>( upload your resume in docs or pdf format )</p>
+          <input type="file" id="resume" name="resume" required accept=".pdf, .docx, .txt">
         </div><hr>
         <div id="form-group">
           <label for="jd">Job Description</label>
@@ -61,10 +66,10 @@
           <p>( upload yor job description in pdf or docs )</p>
           <input type="file" id="jd" name="jd" accept=".pdf, .docx, .txt">
           <br><b class="justify-center items-center flex text-sm">OR</b>
-          <p>( paste your jd in text format, if not in any documents)</p>
-          <textarea name="jd-text" id="jd-text" rows="5" class="w-96"> </textarea>
+          <p>( paste your jd in text format, if not in any documents )</p>
+          <textarea name="jd-text" id="jd-text" rows="5" class="w-96 text-[15px] border-[#555] border-[1px] rounded-[8px] max-sm:w-[95%]"> </textarea>
         </div> <hr>
-        <button type="submit" class="bg-black flex p-2 -mt-2 text-white justify-center items-center rounded-md hover:bg-gray-800">Submit</button>
+        <button type="submit" class="bg-black flex p-2 -mt-2 text-white justify-center items-center rounded-md hover:bg-gray-800 max-sm:w-[95%]">Submit</button>
       </form>
     </div>
   </main>
